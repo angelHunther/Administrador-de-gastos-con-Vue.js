@@ -1,10 +1,15 @@
 <script setup>
+import Presupuesto from './components/Presupuesto.vue';
 </script>
 
 <template>
   <div>
     <header>
         <h1>Planificador de gastos</h1>
+        <div class="contenedor-header contenedor sombra">
+            <Presupuesto></Presupuesto>
+        </div>
+        
     </header>
   </div>
 </template>
@@ -43,5 +48,21 @@ header h1{
     margin: 0;
     color: var(--blanco);
     text-align: center;
+}
+.contenedor{
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+.contenedor-header{
+    margin-top: -5rem;
+    transform: translateY(5rem);
+    padding: 5rem;
+}
+.sombra{
+    box-shadow: 0px 10px 15px -3px rgb(0,0,0, 0.1);
+    background-color: var(--blanco);
+    border-radius: 1.5rem;
+    padding: 5rem;
 }
 </style>
